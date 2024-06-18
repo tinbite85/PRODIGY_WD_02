@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 } 
 body{
     font-size: 15px;
@@ -13,6 +12,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('timer.jpeg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size:contain;
+    background-attachment: fixed;
+    
 }
 .container{
     border-radius: 1px solid;
