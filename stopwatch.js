@@ -20,8 +20,11 @@ let microsecInterval;
 const changebtn = () => {
     if (!isStart) {
         console.log('hi');
-        resetbtn.classList.add('show-function');
-        lapbtn.classList.add('show-function');
+        if (minCount === 0 && milliSecCount === 0 && secCount === 0) {
+            resetbtn.classList.add('show-function');
+            lapbtn.classList.add('show-function');
+        }
+
     }
     else {
         console.log('he');
@@ -35,29 +38,29 @@ const start = () => {
         startbtn.innerHTML = 'pause';
         isStart = true;
 
-        secondInterval= setInterval(() => {
-            if(secCount === 60){
+        secondInterval = setInterval(() => {
+            if (secCount === 60) {
                 secCount = 0;
             }
             SecondBucket.innerHTML = secCount++;
-            }, 1000);
+        }, 1000);
 
-            minuteInterval= setInterval(() => {
-                if(minCount === 60){
-                    minCount = 0;
-                }
-                MinuteBucket.innerHTML = minCount++;
-            }, 60*1000);
+        minuteInterval = setInterval(() => {
+            if (minCount === 60) {
+                minCount = 0;
+            }
+            MinuteBucket.innerHTML = minCount++;
+        }, 60 * 1000);
 
-            microsecInterval= setInterval(() => {
-                if(milliSecCount === 100){
-                    milliSecCount = 0;
-                }
-                milliSecBucket.innerHTML = milliSecCount++;
-            }, 10);
+        microsecInterval = setInterval(() => {
+            if (milliSecCount === 100) {
+                milliSecCount = 0;
+            }
+            milliSecBucket.innerHTML = milliSecCount++;
+        }, 10);
 
-        }
-    
+    }
+
     else {
         console.log('is false');
         startbtn.innerHTML = 'start';
@@ -76,7 +79,7 @@ const reset = () => {
     clearInterval(minuteInterval);
     secCount = 0;
     minCount = 0;  // Reset minCount as well
-    milliSecCount = 0; 
+    milliSecCount = 0;
     isStart = false;
     SecondBucket.innerHTML = "00 :";
     MinuteBucket.innerHTML = "00 :";
@@ -84,7 +87,7 @@ const reset = () => {
     startbtn.innerHTML = 'Start';
     lapbtn.classList.add('show-function');
     resetbtn.classList.add('show-function');
-    ResetStatus= false;
+    ResetStatus = false;
 
 }
 const lap = () => {
