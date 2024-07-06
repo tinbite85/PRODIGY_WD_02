@@ -71,7 +71,7 @@ h1{
     width:90px;
     height: 30px;
     border-radius: round;
-    /* border-style:hidden; */
+    border-style:hidden;
     cursor: pointer;
     color: black
 }
