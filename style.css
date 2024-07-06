@@ -65,12 +65,13 @@ h1{
     border-radius: 30px;
 }
 .button:hover{
-   background-color: lightblue;
    color: black; 
 }
 .button{
-    width:80px;
-    border-radius: round(5px);
+    width:90px;
+    height: 30px;
+    border-radius: round;
+    /* border-style:hidden; */
     cursor: pointer;
     color: black
 }
@@ -83,13 +84,11 @@ h1{
 .lap-content{ 
     font-size: 25px;
     display: flex;
-    border: 1px solid black;
-    border-radius: 2px solid;
     text-align: center;
     padding: 5px;
     margin: 8px;
 }
-.clear-btn{
+#clear-btn{
     width: 150px;
     height: 38px;
     border: 1px solid;
@@ -98,7 +97,7 @@ h1{
     display: block;
     position: relative;
     padding: 10px ;
-    background-color:rgba(182, 137, 194,0.3) ;
+    background-color:blueviolet ;
 }
 
 .show-function{
